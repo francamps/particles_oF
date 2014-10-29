@@ -30,7 +30,9 @@ class Particle {
         // Velocity x,y
         ofPoint vel;
         // Force x,y?
-        ofPoint frc;
+        ofPoint acc;
+        float mass;
+    
         float decay;
     
         float radius0;

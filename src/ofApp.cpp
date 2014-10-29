@@ -6,10 +6,6 @@ void ofApp::setup(){
     
     ofSetFrameRate(60);
     
-    int num = 15000;
-//    vp.assign(num, Particle());
-//    mParticleController.addParticles();
-    
     mParticleController.resetParticles();
 }
 
@@ -17,9 +13,11 @@ void ofApp::setup(){
 void ofApp::update(){
     mouseVel = ofVec2f(ofGetMouseX() - mouseLoc.x, ofGetMouseY() - mouseLoc.y);
     mouseLoc = ofPoint(ofGetMouseX(), ofGetMouseY());
+
     if (mIsPressed) {
         mParticleController.addParticles(mouseLoc, mouseVel);
     }
+    mParticleController.repulseParticles();
     mParticleController.update();
 }
 

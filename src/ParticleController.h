@@ -29,6 +29,8 @@ class ParticleController {
     
         void resetParticles();
     
-//        std::list<Particle> mParticles;
-        vector <Particle> vp;
+        void repulseParticles();
+    
+        std::list<Particle> mParticles;
+//        vector <Particle> vp;
 };
